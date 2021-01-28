@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+/* common.css - 공통레이아웃 디자인 */
+
+/* header */
+.header_area {
+  width: 100%;
+  background-color: #fff;
+  height: 100px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 로고 */
+.logo_img {
+  display: block;
+  width: 170px;
+  max-width: 100%;
+}
+
+.logo_img img {
+  width: 100%;
+}
+
+.lnb,
+.gnb {
+  display: flex;
+}
+
+/* lnb */
+.lnb li {
+  padding: 0 20px;
+}
+
+.lnb li:first-child {
+  padding-left: 0;
+}
+
+
+.lnb a {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* gnb */
+
+.gnb li {
+  padding: 0 5px;
+}
+
+.gnb a {
+  display: block;
+  font-size: 14px;
+}
+
+
+.lnb_mob, .gnb_mob{
+  display: none;
+}
+
+
+/* 모바일 메뉴 버튼 */
+.menu_btn, .close_btn {
+  display: none;
+  width: 30px;
+  border: none;
+  background-color: transparent;
+}
+
+.menu_btn.active, .close_btn.active{
+  display: block;
+}
+
+.menu_btn img, .close_btn img {
+  width: 100%;
+}
+
+@media only screen and (max-width:768px) {
+  .lnb, .gnb{
+    display: none;
+  }
+  .logo_img {
+    width: 130px;
+  }
+
+  .menu_btn {
+    display: block;
+    position: relative;
+  }
+
+  .mob_bg{
+    padding-top: 20%;
+    padding-left: 15%;
+  }
+
+  .lnb_mob.active, .gnb_mob.active{
+    display: block;
+  }
+
+  .lnb_mob li{
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .lnb_mob a{
+    font-size: 35px;
+  }
+
+  .gnb_mob{
+    margin-top: 5%;
+  }
+
+  .gnb_mob a{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .header_wrap {
+    height: 70px;
+  }
+}
+
+
+@media only screen and (max-width:480px) {
+  .logo_img {
+    width: 100px;
+  }
+
+  .close_btn{
+    position: absolute;
+    right: 0;
+  }
+}
+
+
+
+/* 푸터 ************************/
+footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 5%;
+  margin-top: 100px;
+  line-height: 2;
+  font-size: 12px;
+}
+
+
+/* 푸터 왼쪽 */
+/* 푸터 최상단 리스트 */
+.footer_info_list {
+  width: 60%;
+  display: flex;
+
+}
+
+.footer_info_list>li {
+  width: 33.33%;
+}
+
+/* 푸터 서브 리스트 - sns */
+.footer_sns {
+  display: flex;
+  padding-top: 3px;
+}
+
+.footer_sns li {
+  width: 30px;
+  margin-right: 20px;
+}
+
+/* sns이미지 */
+.footer_sub_list img {
+  width: 100%;
+}
+
+/* 푸터ㅓ 오른쪽 규정 */
+.footer_argument_list {
+  display: flex;
+}
+
+.footer_argument_list li {
+  position: relative;
+  padding: 0 3%;
+}
+
+.footer_argument_list li:first-child {
+  padding-left: 0;
+}
+
+.footer_argument_list li::after {
+  content: '';
+  position: absolute;
+  height: 50%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  background-color: #333;
+}
+
+.footer_argument_list li:last-child::after {
+  content: none;
+}
+
+.footer_argument_list a {
+  margin-left: 5px;
+}
+
+.footer_argument_list a:first-child {
+  margin-left: 0;
+}
+
+
+/* 미디어쿼리 */
+@media only screen and (max-width:1024px) {
+  footer {
+    padding: 5%;
+  }
+}
+
+/* 미디어쿼리 1024px */
+
+
+@media only screen and (max-width:768px) {
+  .mob_menu {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .4s;
+    opacity: 0;
+  }
+
+  .mob_menu.active{
+    opacity: 1;
+    right: 0;
+  }
+
+  .mob_bg {
+    background-color: #fff;
+    position: absolute;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+  }
+
+  .mob_bg.active{
+    right: 0;
+  }
+
+  .close_btn{
+    position: absolute;
+    right: 5%;
+    top: 3%;
+  }
+
+
+
+
+
+
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer>* {
+    width: 100%;
+  }
+
+  .footer_info_list {
+    margin-bottom: 7%;
+    width: 100%;
+  }
+}
+
+/* 미디어쿼리 768px */
+
+@media only screen and (max-width:480px) {
+  .footer_info_list {
+    flex-wrap: wrap-reverse;
+  }
+
+  .footer_info_list>li {
+    width: 50%;
+  }
+
+  .footer_info_list>li:last-child {
+    margin-bottom: 20px;
+  }
+
+  .footer_sns {
+    padding-top: 10px;
+  }
+}
+
+/* 미디어쿼리 480px */

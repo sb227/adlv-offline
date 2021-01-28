@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* 오프라인 샵 메인 페이지 css */
+
+/* 파일 merging(합치기) */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 메인타이틀 */
+.main_tit{
+    position: relative;
+    text-align: center;
+    margin: 10% 0 5%;
+    font-size: 30px;
+}
+
+.main_tit::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    bottom: -20px;
+    left: 47%;
+    right: 47%;
+    background-color: #333;
+}
+
+
+/* 신규매장 */
+.section_tit{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.market_img{
+    height: 500px;
+    max-height: 100%;
+    width: 100%;
+    background: url(../images/hanam_star1.jpg) no-repeat center/cover;
+}
+
+.new_market_txt{
+    display: flex;
+    padding:3% 0;
+}
+
+.new_market_txt > div{
+    width: 50%;
+    line-height: 1.7;
+}
+
+.market_name{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.new_market_txt_right{
+    word-break: keep-all;
+}
+
+
+
+/* 지도영역 */
+
+/* map */
+#map{
+    height: 500px;
+    max-height: 100%;
+    margin-top: 0;
+}
+
+.title{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.call_info{
+    margin-bottom: 3px;
+}
+
+
+@media only screen and (max-width:640px){
+    .main_tit{
+        font-size: 25px;
+        margin: 10% 0;
+    }
+
+    .main_tit::after{
+        bottom: -30px;
+    }
+
+    .market_img, #map{
+        height: 300px;
+    }
+
+    .new_market_txt{
+        flex-wrap: wrap;
+    }
+
+    .new_market_txt>div{
+        width: 100%;
+    }
+
+    .new_market_txt_right{
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .section_tit{
+        margin-top: 30px;
+        font-size: 18px;
+    }
+} /* 미디어쿼리 640 */
+
+@media only screen and (max-width:480px){
+    .main_tit{
+        font-size: 20px;
+    }
+
+    /* 줄바꿈 */
+    .mob_block{
+        display: block;
+    }
+}

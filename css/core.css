@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* core.css - 중요 공통 기능 */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Secular+One&display=swap');
+
+/*font-family: 'Noto Sans KR', sans-serif;*/ /*한글*/
+/*font-family: 'Secular One', sans-serif;*/  /*영문*/
+
+/* 공통 */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+.wrap{
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+section{
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width:1280px){
+    section{
+        padding:0 5%;
+    }
+}
+
+
+/* 공통 클래스 */
+/* IR(image replacement) */
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* 비율유지 class */
+.rbx {
+    position: relative;
+}
+
+.rbx::before {
+    content: '';
+    display: block;
+    padding-top: 70%
+        /* 랜덤 지정 */
+    ;
+}
+
+.ibx {
+    /* 비율유지 속박스 */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*float해제*/
+.clb::after {
+    content: "";
+    display: block;
+    clear: both;
+}
