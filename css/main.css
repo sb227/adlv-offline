@@ -89,6 +89,9 @@
     margin-bottom: 3px;
 }
 
+.gm-style .gm-style-iw-c {
+    padding: 12px !important;
+}
 
 @media only screen and (max-width:768px){
     .market_img, #map{
