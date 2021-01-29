@@ -37,6 +37,12 @@ section{
     }
 }
 
+@media only screen and (max-width:768px){
+    .wrap{
+        padding-top: 70px;
+    }
+}
+
 
 /* 공통 클래스 */
 /* IR(image replacement) */
@@ -55,9 +61,7 @@ section{
 .rbx::before {
     content: '';
     display: block;
-    padding-top: 70%
-        /* 랜덤 지정 */
-    ;
+    padding-top: 70%;
 }
 
 .ibx {

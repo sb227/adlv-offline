@@ -32,10 +32,18 @@
 }
 
 .market_img{
+    position: relative;
     height: 500px;
     max-height: 100%;
     width: 100%;
-    background: url(../images/hanam_star1.jpg) no-repeat center/cover;
+    background: url('../images/hanam_star1.jpg') no-repeat center/cover;
+}
+
+.market_img img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .new_market_txt{
@@ -69,6 +77,7 @@
     margin-top: 0;
 }
 
+ /* 지도 정보 영역 */
 .title{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 20px;
@@ -81,6 +90,22 @@
 }
 
 
+@media only screen and (max-width:768px){
+    .market_img, #map{
+        height: 300px;
+    }
+
+     /* 지도 정보 영역 */
+    .title{
+        font-size: 16px;
+    }
+    
+    .call_info, .open_close_info{
+        font-size: 13px;
+    }
+
+} /* 미디어쿼리 768 */
+
 @media only screen and (max-width:640px){
     .main_tit{
         font-size: 25px;
@@ -91,9 +116,7 @@
         bottom: -30px;
     }
 
-    .market_img, #map{
-        height: 300px;
-    }
+    
 
     .new_market_txt{
         flex-wrap: wrap;
@@ -123,4 +146,14 @@
     .mob_block{
         display: block;
     }
+
+    /* 지도 정보 영역 */
+    .title{
+        font-size: 15px;
+    }
+    
+    .call_info, .open_close_info{
+        font-size: 12px;
+    }
+
 }
