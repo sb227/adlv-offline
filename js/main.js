@@ -26,6 +26,20 @@ $(function (e) { ///////////////// JQB //////////////////////
 	}); ///////// click ////////////
 
 
+	// 전체보기 / 신규매장 탭
+	$('.section').eq(1).fadeOut();
+	var sel_shop = $('.select_shop')
+	$('.select_shop').click(function () {
+		var index = sel_shop.index(this);
+		$('.select_shop').removeClass('active');
+		$(this).addClass('active')
+
+		$('.section').removeClass('active');
+		$('.section').fadeOut(400);
+		$('.section').eq(index).fadeIn(400);
+	}); ///////// click /////////////
+
+
 }); ///////////////// JQB //////////////////////
 
 

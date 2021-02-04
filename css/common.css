@@ -47,6 +47,23 @@
   display: block;
   font-size: 18px;
   font-weight: 500;
+  position: relative;
+}
+
+.lnb a::after{
+  content:'';
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  bottom: 0;
+  left: 51%;
+  right: 50%;
+  transition: .2s;
+}
+
+.lnb a:hover::after{
+  left: 0;
+  right: 0;
 }
 
 /* gnb */
